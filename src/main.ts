@@ -27,7 +27,7 @@ async function bootstrap() {
     }),
   );
 
-  const PORT = config.get('API_PORT');
+  const PORT = process.env.PORT || config.get('API_PORT');
   const HOST = config.get('API_HOST');
 
   await app.listen(PORT);
