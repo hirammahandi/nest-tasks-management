@@ -28,8 +28,10 @@ async function bootstrap() {
   );
 
   const PORT = config.get('API_PORT');
+  const HOST = config.get('API_HOST');
+
   await app.listen(PORT);
 
-  Logger.log(`🚀 Application is running on: http://localhost:${PORT}/api`);
+  Logger.log(`🚀 Application is running on: ${HOST}:${PORT}/api`);
 }
 bootstrap();
